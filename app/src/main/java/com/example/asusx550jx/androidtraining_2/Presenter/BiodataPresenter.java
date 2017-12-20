@@ -36,9 +36,9 @@ public class BiodataPresenter implements BiodataPresenterInterface {
             public void onResponse(Call<ResponseModel> call, Response<ResponseModel> response) {
                 ResponseModel res = response.body();
                 if(res.getCode()==1){
-                    BVI.onFinishinsert(res);
-                } else {
                     BVI.onFailureinsert();
+                } else {
+                    BVI.onFinishinsert(res);
                 }
             }
 

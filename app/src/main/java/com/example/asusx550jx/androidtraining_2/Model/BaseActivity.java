@@ -18,7 +18,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class BaseActivity extends AppCompatActivity {
     private APIRequest api;
-    private static final String URL = "http://192.168.1.54/Pelatihan/";
+    private static final String URL = "http://192.168.137.1/Pelatihan/";
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
