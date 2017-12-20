@@ -1,8 +1,11 @@
 package com.example.asusx550jx.androidtraining_2.Model;
 
+import android.content.DialogInterface;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 
 import okhttp3.OkHttpClient;
 import okhttp3.logging.HttpLoggingInterceptor;
@@ -36,6 +39,24 @@ public class BaseActivity extends AppCompatActivity {
 
     public APIRequest getAPI() {
         return api;
+    }
+
+    public void makeErrorDialog(String msg){
+        AlertDialog.Builder adb = new AlertDialog.Builder(this);
+        adb.setMessage(msg);
+        adb.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface arg0, int arg1) {
+                arg0.dismiss();
+            }
+        });
+        AlertDialog al = adb.create();
+        al.show();
+    }
+    public void log(String log){
+        if(true){
+            Log.d("Biodata",log);
+        }
     }
 }
 

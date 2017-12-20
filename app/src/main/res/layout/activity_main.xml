@@ -14,8 +14,8 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:layout_margin="20dp">
+            android:layout_margin="20dp"
+            android:orientation="vertical">
 
             <TextView
                 android:layout_width="match_parent"
@@ -42,6 +42,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="10dp"
                 android:layout_marginTop="10dp">
+
                 <EditText
                     android:id="@+id/edtPanggilan"
                     android:layout_width="match_parent"
@@ -69,6 +70,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="10dp"
                 android:layout_marginTop="10dp">
+
                 <EditText
                     android:id="@+id/edttgLahir"
                     android:layout_width="match_parent"
@@ -85,7 +87,13 @@
                 android:text="Jenis Kelamin"
                 android:textSize="20sp" />
 
+            <TextView
+                android:id="@+id/inputjk"
+                android:layout_width="0dp"
+                android:layout_height="0dp" />
+
             <RadioGroup
+                android:id="@+id/rdbtngender"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
@@ -100,14 +108,16 @@
                         android:layout_marginRight="30dp"
                         android:text="Laki-laki"
                         android:textSize="20sp"
-                        android:textStyle="bold" />
+                        android:textStyle="bold"
+                        android:id="@+id/chklaki"/>
 
                     <RadioButton
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="Perempuan"
                         android:textSize="20sp"
-                        android:textStyle="bold" />
+                        android:textStyle="bold"
+                        android:id="@+id/chkperem"/>
                 </LinearLayout>
 
 
